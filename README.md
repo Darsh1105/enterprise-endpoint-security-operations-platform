@@ -1,7 +1,5 @@
 Enterprise Endpoint Security Operations Platform (EESOP)
 
-EESOP — Enterprise Endpoint Security Operations Platform
-
 Developed by Darshayu Global Solutions
 
 EESOP is a security operations platform prototype designed to centralize endpoint security visibility, incident management, policy management, remediation workflows, response actions, and security auditing within a single operational interface.
@@ -55,6 +53,24 @@ Compliance Monitoring
 Security Automation
 
 Operational Excellence
+
+## Application Screenshots
+
+### Dashboard
+
+![EESOP Dashboard](docs/screenshots/dashboard.png)
+
+### Endpoint 360
+
+![Endpoint 360](docs/screenshots/endpoint-360.png)
+
+### Policy Management
+
+![Policy Management](docs/screenshots/policy-management.png)
+
+### Remediation Center
+
+![Remediation Center](docs/screenshots/remediation-center.png)
 
 Key Capabilities
 
@@ -161,13 +177,13 @@ Security investigation actions
 The workflow separates:
 
 Request
-   ↓
+↓
 Authorization
-   ↓
+↓
 Execution
-   ↓
+↓
 Result
-   ↓
+↓
 Audit
 
 This demonstrates separation of duties within a security operations environment.
@@ -197,13 +213,13 @@ Policy audit information
 The policy workflow follows:
 
 Policy Review
-      ↓
+↓
 Policy Tuning
-      ↓
+↓
 Deployment
-      ↓
+↓
 Validation
-      ↓
+↓
 Audit
 
 Policy changes are controlled through role-based permissions.
@@ -237,13 +253,13 @@ Audit information
 The workflow follows:
 
 Request
-   ↓
+↓
 Security Lead Approval
-   ↓
+↓
 Execution
-   ↓
+↓
 Validation
-   ↓
+↓
 Audit Timeline
 
 The current V1 implementation simulates script deployment and execution rather than executing scripts against production endpoints.
@@ -325,43 +341,43 @@ EESOP follows controlled operational workflows rather than allowing every user t
 Incident Response
 
 Security Detection
-       ↓
+↓
 Incident
-       ↓
+↓
 Investigation
-       ↓
+↓
 Response Request
-       ↓
+↓
 Authorized Execution
-       ↓
+↓
 Result
-       ↓
+↓
 Audit Timeline
 
 Policy Management
 
 Policy
-  ↓
+↓
 Review
-  ↓
+↓
 Tune
-  ↓
+↓
 Deploy
-  ↓
+↓
 Validate
-  ↓
+↓
 Audit
 
 Remediation
 
 Remediation Request
-        ↓
+↓
 Lead Approval
-        ↓
+↓
 Execution
-        ↓
+↓
 Validation
-        ↓
+↓
 Audit
 
 RBAC and Separation of Duties
@@ -371,20 +387,29 @@ One of the core security concepts demonstrated by EESOP is separation of duties.
 For example:
 
 Security Analyst
+
       │
       └── Request remediation
-              ↓
-        Security Lead
+
+          ↓
+
+Security Lead
+
               │
               └── Approve
-                    ↓
-             Security Engineer
+
+                ↓
+
+Security Engineer
+
                     │
                     └── Execute
-                          ↓
-                      Validation
-                          ↓
-                     Audit
+
+                      ↓
+                  Validation
+                      ↓
+
+Audit
 
 This prevents a single operational role from automatically performing every stage of a privileged security workflow.
 
@@ -499,7 +524,9 @@ EESOP/
 
 The application separates UI functionality from service and repository layers to make the platform easier to extend.
 
-Database
+## Database
+
+
 
 EESOP uses SQLite for the V1 prototype.
 
@@ -570,26 +597,30 @@ Installation
 git clone <repository-url>
 cd EESOP
 
-2. Create a virtual environment
+### 2. Create a virtual environment
 
-Windows
+
+- Windows
 
 python -m venv venv
+
 
 Activate it:
 
 .\venv\Scripts\Activate.ps1
 
-Linux/macOS
+- Linux/macOS
 
 python3 -m venv venv
 source venv/bin/activate
 
-3. Install dependencies
+### 3. Install dependencies
+
 
 pip install -r requirements.txt
 
-Running EESOP
+## Running EESOP
+
 
 Start the Streamlit application:
 
@@ -597,13 +628,15 @@ streamlit run app.py
 
 The application will start locally and provide the EESOP login interface.
 
-Demo Roles
+## Demo Roles
+
 
 The V1 prototype contains separate users representing different security responsibilities:
 
-Username
+**Username**
 
-Role
+**Role**
+
 
 analyst
 
