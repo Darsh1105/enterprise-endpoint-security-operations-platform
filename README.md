@@ -70,7 +70,7 @@ Operational Excellence
 
 ### Remediation Center
 
-![Remediation Center](docs/screenshots/Remediation%20center.png)
+![Remediation Center](docs/screenshots/Remediation%20Center.png)
 
 Key Capabilities
 
