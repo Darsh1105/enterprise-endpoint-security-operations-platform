@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+
+database/*.db
+
+.env
+
+.idea/
+.vscode/settings.json
+logs/
+.pytest_cache/
