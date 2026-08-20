@@ -58,19 +58,19 @@ Operational Excellence
 
 ### Dashboard
 
-![EESOP Dashboard](docs/screenshots/dashboard.png)
+![EESOP Dashboard](docs/screenshots/Dashboard.png)
 
 ### Endpoint 360
 
-![Endpoint 360](docs/screenshots/endpoint-360.png)
+![Endpoint 360](docs/screenshots/Endpoint%20360.png)
 
 ### Policy Management
 
-![Policy Management](docs/screenshots/policy-management.png)
+![Policy Management](docs/screenshots/Policy%20Management.png)
 
 ### Remediation Center
 
-![Remediation Center](docs/screenshots/remediation-center.png)
+![Remediation Center](docs/screenshots/Remediation%20center.png)
 
 Key Capabilities
 
