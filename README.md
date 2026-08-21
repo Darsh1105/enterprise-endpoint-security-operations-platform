@@ -1,10 +1,10 @@
-Enterprise Endpoint Security Operations Platform (EESOP)
+# Enterprise Endpoint Security Operations Platform (EESOP)
 
 Developed by Darshayu Global Solutions
 
 EESOP is a security operations platform prototype designed to centralize endpoint security visibility, incident management, policy management, remediation workflows, response actions, and security auditing within a single operational interface.
 
-Overview
+## Overview
 
 Modern enterprise endpoint environments generate large volumes of security telemetry, incidents, policy events, compliance data, and remediation requirements.
 
@@ -32,7 +32,7 @@ Endpoint security compliance monitoring
 
 EESOP is designed as a portfolio and learning project demonstrating practical Endpoint Security, Security Operations, Incident Response, Security Engineering, Detection Engineering, and automation concepts.
 
-Vision
+## Vision
 
 To provide a centralized enterprise platform for:
 
@@ -72,7 +72,7 @@ Operational Excellence
 
 ![Remediation Center](docs/screenshots/Remediation%20Center.png)
 
-Key Capabilities
+## Key Capabilities
 
 1. Security Operations Dashboard
 
@@ -264,7 +264,7 @@ Audit Timeline
 
 The current V1 implementation simulates script deployment and execution rather than executing scripts against production endpoints.
 
-Role-Based Access Control
+## Role-Based Access Control
 
 EESOP implements role-based access control to separate security responsibilities.
 
@@ -334,7 +334,7 @@ Administrator
 
 The Administrator role provides platform-level access to the available operational functionality.
 
-Security Workflows
+## Security Workflows
 
 EESOP follows controlled operational workflows rather than allowing every user to directly modify security controls.
 
@@ -380,7 +380,7 @@ Validation
 ↓
 Audit
 
-RBAC and Separation of Duties
+## RBAC and Separation of Duties
 
 One of the core security concepts demonstrated by EESOP is separation of duties.
 
@@ -413,7 +413,7 @@ Audit
 
 This prevents a single operational role from automatically performing every stage of a privileged security workflow.
 
-Audit and Security Timeline
+## Audit and Security Timeline
 
 Security-related operations are recorded through the EESOP audit/timeline mechanisms.
 
@@ -437,21 +437,21 @@ User who performed the action
 
 This provides traceability for security operations and administrative activity.
 
-Technology Stack
+## Technology Stack
 
-Application
+### Application
 
 Python
 
 Streamlit
 
-Data
+### Data
 
 SQLite
 
 Pandas
 
-Security Operations Concepts
+## Security Operations Concepts
 
 Endpoint Security
 
@@ -471,7 +471,7 @@ SLA Monitoring
 
 Risk Scoring
 
-Endpoint Security Technologies Represented
+## Endpoint Security Technologies Represented
 
 Microsoft Defender
 
@@ -483,13 +483,18 @@ Endpoint Security Policies
 
 Endpoint Remediation
 
-Project Architecture
+## Project Architecture
 
 The project follows a layered structure separating the user interface, business logic, repositories, and database.
 
 EESOP/
 │
 ├── app.py
+├── config.py
+├── requirements.txt
+├── test_security.py
+├── README.md
+├── LICENSE
 │
 ├── pages/
 │   ├── 1_Endpoint_360.py
@@ -513,14 +518,15 @@ EESOP/
 │   └── Security Services
 │
 ├── database/
-│   └── Database Connection / Repository Layer
+│   ├── Database Connection
+│   ├── Schema
+│   ├── Initialization
+│   ├── Migrations
+│   └── Seed Data
 │
-├── data/
-├── telemetry/
-├── scripts/
-├── playbooks/
-├── tests/
 └── docs/
+    ├── database/
+    └── screenshots/
 
 The application separates UI functionality from service and repository layers to make the platform easier to extend.
 
@@ -570,7 +576,7 @@ Incident Response Actions
 
 Authentication Sessions
 
-Authentication
+## Authentication
 
 EESOP provides application authentication with persistent browser session handling.
 
@@ -590,41 +596,45 @@ Permission checks
 
 Protected application pages are not exposed to unauthenticated users.
 
-Installation
+## Installation
 
 1. Clone the repository
 
-git clone <repository-url>
-cd EESOP
+git clone https://github.com/Darsh1105/enterprise-endpoint-security-operations-platform.git
+cd enterprise-endpoint-security-operations-platform
 
 ### 2. Create a virtual environment
 
 
-- Windows
+### Windows
 
+```powershell
 python -m venv venv
-
+```
 
 Activate it:
 
+```powershell
 .\venv\Scripts\Activate.ps1
+```
+### Linux/macOS
 
-- Linux/macOS
-
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install dependencies
 
-
+```bash
 pip install -r requirements.txt
+```
 
 ## Running EESOP
 
-
-Start the Streamlit application:
-
+```bash
 streamlit run app.py
+```
 
 The application will start locally and provide the EESOP login interface.
 
@@ -656,13 +666,13 @@ EESOP Administrator
 
 Security note: Demo credentials should be managed according to the application's authentication configuration and should never be committed to source control.
 
-Current V1 Scope
+## Current V1 Scope
 
 The current version focuses on demonstrating the architecture and operational workflows of an enterprise endpoint security platform.
 
 Included:
 
-Authentication
+## Authentication
 
 Persistent sessions
 
@@ -692,7 +702,7 @@ Compliance monitoring
 
 SQLite persistence
 
-Important V1 Limitation
+## Important V1 Limitation
 
 EESOP V1 is a security operations prototype.
 
@@ -702,7 +712,7 @@ The application does not currently execute security remediation commands against
 
 The architecture is designed so that future versions can integrate with real endpoint security APIs and enterprise management platforms.
 
-Future Enhancements
+## Future Enhancements
 
 Potential future versions can integrate:
 
@@ -748,7 +758,7 @@ Production-grade authentication
 
 Enterprise database backend
 
-Security Design Principles
+## Security Design Principles
 
 EESOP demonstrates several practical security engineering principles:
 
@@ -772,7 +782,7 @@ Change management
 
 Remediation validation
 
-Project Status
+## Project Status
 
 Version: 1.0
 
@@ -780,7 +790,7 @@ Status: Functional V1 Prototype
 
 The current version demonstrates the core security operations workflows and RBAC model required for an enterprise endpoint security operations platform.
 
-Author
+## Author
 
 Darshit Goyal
 
@@ -788,8 +798,9 @@ Developed under:
 
 Darshayu Global Solutions
 
-Disclaimer
+## Disclaimer
 
 EESOP is an educational and portfolio security engineering project.
 
 It is not intended to replace enterprise-grade endpoint security, EDR, SIEM, IAM, ITSM, or security orchestration platforms.
+
